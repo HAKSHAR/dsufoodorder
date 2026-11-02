@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DSU online food ordering system">
+  <title>DSU Food Ordering System</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">DSU <span>Food</span></a>
+    <nav><a href="#restaurants">Restaurants</a><a href="#menu">Menu</a><a href="#cart">My Cart</a><a href="/admin/login">Admin</a></nav>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div><p class="eyebrow">DAYANANDA SAGAR UNIVERSITY</p><h1>Good food.<br><span>Easy ordering.</span></h1><p>Choose a restaurant, build your cart, and send your order through WhatsApp.</p><a class="btn primary" href="#restaurants">Explore restaurants</a></div>
+      <div class="hero-art" aria-hidden="true">🍔<span>🍕</span><b>🥤</b></div>
+    </section>
+    <section id="restaurants" class="section">
+      <div class="section-head"><div><p class="eyebrow">FIND YOUR FAVOURITE</p><h2>Choose a restaurant</h2></div><span id="restaurantCount" class="muted">Loading…</span></div>
+      <div id="restaurantGrid" class="restaurant-grid"><p class="muted">Loading restaurants from MySQL…</p></div>
+    </section>
+    <section id="menu" class="section">
+      <div class="section-head"><div><p class="eyebrow">MADE FOR YOUR CRAVINGS</p><h2>Explore the menu</h2></div><input id="search" class="search" placeholder="Search food…" aria-label="Search food"></div>
+      <div class="menu-layout">
+        <div id="menuGrid" class="menu-grid"><p class="muted">Loading menu…</p></div>
+        <aside id="cart" class="cart">
+          <div class="cart-title"><div><p class="eyebrow">YOUR ORDER</p><h2>My cart <span id="cartCount" class="count">0</span></h2></div><span>🛒</span></div>
+          <div id="cartItems" class="cart-items"><div class="cart-empty"><span>🛍️</span><p>Your cart is empty</p><small>Add something delicious!</small></div></div>
+          <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0.00</strong></div>
+          <label class="field-label" for="customerName">Name (optional)</label><input id="customerName" class="field" maxlength="120" placeholder="Your name">
+          <button id="orderNow" class="btn primary order-btn" disabled>Order now on WhatsApp <span>↗</span></button>
+          <small class="cart-note">Press Send in WhatsApp to place it.</small>
+        </aside>
+      </div>
+    </section>
+    <div id="pageMessage" role="status" aria-live="polite"></div>
+  </main>
+  <footer class="footer">DSU Food Ordering System · Built with HTML, CSS, JavaScript, Node.js, Express and MySQL</footer>
+  <script src="/js/script.js" defer></script>
+</body>
+</html>
